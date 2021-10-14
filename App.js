@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {/* Added this scroll view to enable scrolling when list gets longer than the page */}
+      {/* scroll */}
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1
@@ -32,7 +32,7 @@ export default function App() {
       <View style={styles.tasksWrapper}>
         <Text style={styles.sectionTitle}>Today's tasks</Text>
         <View style={styles.items}>
-          {/* This is where the tasks will go! */}
+          {/*task */}
           {
             taskItems.map((item, index) => {
               return (
@@ -48,7 +48,7 @@ export default function App() {
       </ScrollView>
 
       {/* Write a task */}
-      {/* Uses a keyboard avoiding view which ensures the keyboard does not cover the items on screen */}
+      {/* keyboards*/}
       <KeyboardAvoidingView 
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.writeTaskWrapper}
